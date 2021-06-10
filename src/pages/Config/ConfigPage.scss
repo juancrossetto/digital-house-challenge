@@ -1,0 +1,17 @@
+.config{
+  margin: 8rem 1rem;
+  position:relative;
+  &__btn {
+    max-width: 14rem;
+    position: absolute;
+    right: 0;
+    bottom: -4rem;
+  }
+
+  &__error {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2rem;
+    color:#f52f41;
+  }
+}

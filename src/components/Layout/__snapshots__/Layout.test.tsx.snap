@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Layout /> renders correctly 1`] = `
+<div
+  className="layout"
+>
+  <div>
+    <div>
+      <div
+        className="menu"
+      >
+        <div
+          className="menu__image-container"
+        >
+          <img
+            alt="logo digital house"
+            className="menu__img"
+            decoding="async"
+            loading="lazy"
+            onClick={[Function]}
+            src="logo.png"
+          />
+        </div>
+        <ul
+          className="menu__nav"
+        >
+          <li
+            className="menu__nav__item"
+          >
+            <a
+              href="/config"
+              onClick={[Function]}
+            >
+              Administrar
+            </a>
+          </li>
+        </ul>
+        <button
+          className="menu__btn"
+        >
+          <svg
+            className="chakra-icon css-13otjrl"
+            fill="currentColor"
+            focusable={false}
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 16 16"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clipRule="evenodd"
+              d="M14.53 10.53a7 7 0 01-9.058-9.058A7.003 7.003 0 008 15a7.002 7.002 0 006.53-4.47z"
+              fillRule="evenodd"
+            />
+          </svg>
+           Dark
+           mode
+        </button>
+      </div>
+    </div>
+    Layout Test
+  </div>
+</div>
+`;

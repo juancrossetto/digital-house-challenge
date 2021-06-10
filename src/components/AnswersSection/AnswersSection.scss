@@ -1,0 +1,65 @@
+
+.answer {
+	width: 95%;
+	margin: 0.5rem auto;
+	padding: 0.5rem;
+	&__divider {
+		border-top: 0.2rem solid #33383c;
+		margin: 1rem auto;
+		width: 100%;
+	}
+}
+.option {
+	&__container {
+		display: flex;
+		align-items: center;
+		margin: 0.5rem auto;
+		justify-content: center;
+	}
+
+	&__label {
+		font-size: 1rem;
+		width: 7rem;
+		min-width: 7rem;
+		// margin-right: 3rem;
+	}
+
+	&__input {
+		margin-right: 1rem;
+		font-size: 1rem;
+		width: 45%;
+		min-width: 20rem;
+	}
+
+	&__type {
+		width: 1.2rem;
+		height: 1.2rem;
+		margin-right: 1rem;
+	}
+
+	&__btn-container {
+		display: flex;
+		gap: 1rem;
+
+    &--add {
+      justify-content: center;
+    }
+	}
+
+  &__error {
+		color: red;
+		font-size: 0.9rem;
+	}
+
+	&__btn {
+		height: 2.2rem;
+		width: 2.2rem;
+		min-width: 2.2rem;
+
+    &--add {
+      width: 30%;
+      min-width: 14rem;
+      margin: 1.2rem auto;
+    }
+	}
+}

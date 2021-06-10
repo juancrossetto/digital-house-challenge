@@ -1,0 +1,27 @@
+.btn {
+  color: #ffffff;
+  background-color: #f52f41;
+  border-radius: 0.5rem;
+  width: 80%;
+  min-width: 3rem;
+  height: 2.2rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+  min-width: 8rem;
+  min-height: 2.2rem;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #f52f41;
+    border: 1px solid #f52f41;
+  }
+
+  &:disabled {
+    color: #ffffff;
+    background-color: #2d343a;
+    border: none;
+    
+  }
+
+}

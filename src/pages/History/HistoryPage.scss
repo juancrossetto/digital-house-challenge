@@ -1,0 +1,17 @@
+.history {
+	width: 70%;
+	height: 80vh;
+  margin: 4rem auto;
+
+	&__no-data {
+		font-weight: bold;
+		font-size: 2rem;
+	}
+
+	&__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+	}
+}

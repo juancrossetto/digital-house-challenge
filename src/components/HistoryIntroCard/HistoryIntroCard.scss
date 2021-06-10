@@ -1,0 +1,32 @@
+.history-intro {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+	justify-content: space-around;
+	align-items: center;
+  background-color: #2d343a;
+  border-radius: 0.5rem;
+  border: 1px solid #ffffff;
+  padding: 1rem;
+  margin-bottom: 3rem;
+  height: 14rem;
+
+	&__status {
+    display: flex;
+    flex-direction: row;
+    gap: .8rem;
+    font-size: 1.5rem;
+		&--approved {
+			color: rgb(47, 255, 89);
+		}
+		&--disapproved {
+			color: red;
+		}
+	}
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: bold;
+
+  }
+}

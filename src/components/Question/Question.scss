@@ -1,0 +1,30 @@
+.question{
+  font-weight: bold;
+  font-size: 1.4rem;
+
+  &__title {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+
+.answers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 3rem;
+
+  &__text {
+    margin-right: 1rem;
+    font-weight: normal;
+  }
+}
+
+.answers {
+  margin: 2rem auto;
+
+  &__type {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}

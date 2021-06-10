@@ -1,0 +1,17 @@
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  
+  &__item {
+
+  }
+
+  &__msg {
+    color: #FFFFFF;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,16 @@
+.table {
+  &__icons {
+    &:hover {
+      cursor:pointer;
+    }
+  }
+
+  &__icon {
+    margin-right: .7rem;
+  }
+
+  &__no-data {
+    text-align: center;
+  }
+
+}
