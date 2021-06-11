@@ -34,6 +34,7 @@ const AnswersSection: FC<IAnswersSection> = ({
   useEffect(() => {
     console.log('questionsUpdated', questionsUpdated);
     setQuestionsUpdated([...fields]);
+    // eslint-disable-next-line
   }, [fields]);
 
   return (
