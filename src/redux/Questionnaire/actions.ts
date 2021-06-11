@@ -59,27 +59,26 @@ export const getQuestionnaireByIdAction = (id: number) => {
   };
 };
 
-export const createQuestionnaireAction = (questionnaire: IQuestionnaire) => {
+export const createQuestionnaireAction = (questionnaire: IQuestionnaire, push: any) => {
   return async (dispatch: types.QuestionnaireDispatchType | any) => {
     dispatch({ type: types.CREATE_QUESTIONNAIRE });
     try {
       const resp = await create(questionnaire);
-      setTimeout(() => {
-        if (resp) {
-          dispatch({
-            type: types.CREATE_QUESTIONNAIRE_SUCCESS,
-            payload: `Cuestionario ${questionnaire.title} creado correctamente`,
-          });
-        }
-      }, 500);
+      if (resp) {
+        dispatch({
+          type: types.CREATE_QUESTIONNAIRE_SUCCESS,
+          payload: `Cuestionario ${questionnaire.title} creado correctamente`,
+        });
+        dispatch(resetNotificationAction());
+        push('/config');
+      }
     } catch (error) {
       dispatch({
         type: types.CREATE_QUESTIONNAIRE_FAILED,
         payload: `Error al crear cuestionario: ${error?.message}`,
       });
-    } finally {
       dispatch(resetNotificationAction());
-    }
+    } 
   };
 };
 

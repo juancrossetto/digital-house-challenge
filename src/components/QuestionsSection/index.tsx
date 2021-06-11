@@ -29,8 +29,7 @@ const QuestionsSection: FC<IQuestionsSection> = ({
     order: fields.length + 1,
     question: "",
   };
-  // console.log('fields', fields);
-  // console.log('itemsUpdated', itemsUpdated);
+
   useEffect(() => {
     setitemsUpdated([...fields]);
   }, [fields]);
@@ -55,16 +54,13 @@ const QuestionsSection: FC<IQuestionsSection> = ({
     let itemsToUpdate = [...itemsUpdated];
     if (itemsToUpdate[index] && itemsToUpdate[index].answers && itemsToUpdate[index].answers[subIndex]) {
       const actualValue = itemsToUpdate[index].answers[subIndex].isCorrect || false;
-      console.log('actualValue', actualValue);
       if(itemsToUpdate[index].isMultipleChoice) {
         itemsToUpdate[index].answers[subIndex].isCorrect = !actualValue;
       } else {
-        itemsToUpdate[index].answers.map((itm: any, k:number) => {
-          console.log('itm', itm, subIndex, index);
+        itemsToUpdate[index].answers.forEach((itm: any, k:number) => {
           itm.isCorrect = k === subIndex ?  true : false;
         });
       }
-      console.log('itemsToUpdate', itemsToUpdate);
       setitemsUpdated(itemsToUpdate);
     }
   };

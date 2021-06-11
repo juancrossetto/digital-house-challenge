@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
@@ -24,6 +24,7 @@ export interface QuestionnaireFormProps {
 }
 
 const QuestionnaireForm: FC<QuestionnaireFormProps> = ({ questionnaire }) => {
+  const { push } = useHistory();
   const dispatch: Dispatch<any> = useDispatch();
   const { loading, error } = useSelector(
     (state: AppState) => state.questionnaire
@@ -75,13 +76,11 @@ const QuestionnaireForm: FC<QuestionnaireFormProps> = ({ questionnaire }) => {
   });
 
   const onSubmit: SubmitHandler<IQuestionnaire> = (data: any) => {
-    data?.items.map((item: any, i:number) => {
+    data?.items.forEach((item: any, i:number) => {
       item.answers?.forEach((answer: any, k:number) => {
-        console.log('pre cambio', answer.description, answer.isCorrect);
         // if (item.isMultipleChoice) {
           answer.isCorrect = ['on', 'true', true].includes(answer.isCorrect) ? true : false;
         // } else {
-        //   console.log('es single choice?', answer);
         //   answer.isCorrect = k === 0 ?  true : false;
         // }
       });
@@ -89,7 +88,7 @@ const QuestionnaireForm: FC<QuestionnaireFormProps> = ({ questionnaire }) => {
     
     console.log("data", data);
     if (isAddMode) {
-      dispatch(createQuestionnaireAction(data));
+      dispatch(createQuestionnaireAction(data, push));
     } else {
       dispatch(updateQuestionnaireAction(Number(id), data));
     }
@@ -162,7 +161,7 @@ const QuestionnaireForm: FC<QuestionnaireFormProps> = ({ questionnaire }) => {
           isReadOnly={false}
         />
         {errors && errors.items && (
-          <span className="question__error">{errors.items.message}</span>
+          <span className="questions__error">{errors.items.message}</span>
         )}
       </div>
       <div className="form__btn-container">

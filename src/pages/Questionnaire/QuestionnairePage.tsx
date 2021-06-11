@@ -7,10 +7,10 @@ import Question from "../../components/Question";
 import Spinner from "../../components/Spinner";
 import useNotification from "../../hooks/useNotification";
 import {
-  setNextStepAction,
   setPreviousStepAction,
   setQuestionnaireAction,
   cleanStateAction,
+  evaluateAnswersAction,
 } from "../../redux/Form/actions";
 import { getQuestionnaireByIdAction } from "../../redux/Questionnaire/actions";
 import { AppState } from "../../redux/store";
@@ -19,41 +19,42 @@ import "./QuestionnairePage.scss";
 interface Params {
   id: string;
 }
-
 const QuestionnairePage: FC = () => {
   const { id } = useParams<Params>();
   const dispatch: Dispatch<any> = useDispatch();
-  const [optionsSelected, setOptionsSelected] = useState<string[]>([]);
-  const { questionnaireSelected, loading, error, notification } = useSelector(
+  const [optionsSelected, setOptionsSelected] = useState<IAnswer[]>([]);
+  const { questionnaireSelected, loading } = useSelector(
     (state: AppState) => state.questionnaire
   );
-  const { currentStep, totalSteps } = useSelector(
+  const { currentStep, totalSteps, loading:formLoading, notification, error: formError , currentResponse} = useSelector(
     (state: AppState) => state.form
   );
-  useNotification(error, notification);
+  useNotification(formError, notification);
 
   useEffect(() => {
     return () => {
       dispatch(cleanStateAction());
     };
-     // eslint-disable-next-line
+    // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
     if (id && !questionnaireSelected) {
       dispatch(getQuestionnaireByIdAction(Number(id)));
     }
-     // eslint-disable-next-line
+    // eslint-disable-next-line
   }, [id]);
 
   useEffect(() => {
     if (questionnaireSelected) {
       dispatch(setQuestionnaireAction(questionnaireSelected));
+      console.log('questionnaireSelected', questionnaireSelected);
     }
-     // eslint-disable-next-line
+    // eslint-disable-next-line
   }, [questionnaireSelected]);
 
-  const handleNextStep = () => {
+  const handleNextStep = (options: IAnswer[]) => {
+    dispatch(evaluateAnswersAction(optionsSelected, options));
     // dispatch(setNextStepAction());
   };
 
@@ -63,7 +64,7 @@ const QuestionnairePage: FC = () => {
 
   useEffect(() => {
     console.log('optionsSelected', optionsSelected);
-     // eslint-disable-next-line
+    // eslint-disable-next-line
   }, [optionsSelected]);
 
   return (
@@ -76,7 +77,7 @@ const QuestionnairePage: FC = () => {
           <div className="questionnaire__container">
             {questionnaireSelected.items && questionnaireSelected.items.length && (
               <div className="questionnaire__questions">
-                <Question item={questionnaireSelected.items[currentStep - 1]} handleCheck={setOptionsSelected} />
+                {currentResponse ? <Question item={currentResponse} handleCheck={setOptionsSelected} /> : <p>No hay mas preguntas</p>}
                 <div className="questionnaire__btn-container">
                   <Button
                     className="questionnaire__btn questionnaire__btn--first"
@@ -88,7 +89,7 @@ const QuestionnairePage: FC = () => {
                   {currentStep !== totalSteps ? (
                     <Button
                       className="questionnaire__btn questionnaire__btn--last"
-                      onClick={handleNextStep}
+                      onClick={() => handleNextStep(questionnaireSelected.items[currentStep - 1].answers)}
                       style={{ width: "20%" }}
                     >
                       Siguiente
@@ -111,7 +112,7 @@ const QuestionnairePage: FC = () => {
           </div>
         </>
       )}
-      {loading && <Spinner />}
+      {(loading || formLoading) && <Spinner />}
     </div>
   );
 };

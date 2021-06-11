@@ -1,38 +1,41 @@
-import React, { ChangeEvent, FC } from "react";
+import React, { ChangeEvent, FC, useEffect } from "react";
 import "./Question.scss";
 
 export interface IQuestionProps {
-  item: IQuestionnaireItem;
+  item: IQuestionnaireHistoryItem;
   handleCheck: any;
 }
 
 const Question: FC<IQuestionProps> = ({ item, handleCheck }) => {
-  const { order, answers, question, isMultipleChoice } = item;
+  const { answers, question, isMultipleChoice } = item;
 
-  const handleResponse = (e: ChangeEvent<HTMLInputElement>, option: string) => {
+  const handleResponse = (e: ChangeEvent<HTMLInputElement>, option: IAnswer) => {
     if (e.target.checked) {
-      handleCheck((oldArray:string[]) => [...oldArray, option]);
+      handleCheck((oldArray:IAnswer[]) => [...oldArray, option]);
     } else {
-      handleCheck((oldArray: string[]) => [...oldArray.filter(oldOption => oldOption !== option)]);
+      handleCheck((oldArray: IAnswer[]) => [...oldArray.filter((oldOption: IAnswer) => oldOption.description !== option.description)]);
     }
   }
+  useEffect(() => {
+    console.log('cambio item', item);
+  }, [item])
   
   return (
-    <div key={order} className="question">
+    <div className="question">
       <p className="question__title">
         {question}
       </p>
       <div className="question__answers">
         {answers?.map((answer) => (
-          <div className="answers">
+          <div className="answers" key={answer.description}>
             <p className="answers__text">- {answer.description}</p>
             <input
               className="answers__type"
               type={isMultipleChoice ? "checkbox" : "radio"}
               name="optionSelected"
-              value={answer.description}
-              onChange={(e) => handleResponse(e, answer.description)}
-              // checked={false}
+              // value={answer.description}
+              onChange={(e) => handleResponse(e, answer)}
+              defaultChecked={answer.selected}
             />
           </div>
         ))}

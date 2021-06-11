@@ -1,306 +1,310 @@
 {
-	"questionnaires": [
-		{
-			"items": [
-				{
-					"answers": [
-						{
-							"description": "Cristina Kirchner",
-							"isCorrect": true
-						},
-						{
-							"description": "Evita Perón",
-							"isCorrect": true
-						},
-						{
-							"isCorrect": true,
-							"description": "Madonna"
-						}
-					],
-					"isMultipleChoice": true,
-					"order": "1",
-					"question": "¿Quien fue la primer presidente Argentina?"
-				},
-				{
-					"answers": [
-						{
-							"isCorrect": true,
-							"description": "Juan Domingo Perón"
-						},
-						{
-							"isCorrect": true,
-							"description": "Arturo Illia"
-						},
-						{
-							"isCorrect": true,
-							"description": "Ricardo Fort"
-						},
-						{
-							"isCorrect": false,
-							"description": "Michael Jackson"
-						}
-					],
-					"isMultipleChoice": true,
-					"order": "2",
-					"question": "¿Cuales de las siguientes figuras fueron presidentes ?"
-				}
-			],
-			"attempts": 20,
-			"approvalPercentage": 80,
-			"statement": "Cuestionario sobre politica argentina en la decada de los '70",
-			"title": "Historia Argentina",
-			"id": 6
-		},
-		{
-			"items": [
-				{
-					"answers": [
-						{
-							"description": "React",
-							"isCorrect": false
-						},
-						{
-							"isCorrect": false,
-							"description": "Angular"
-						},
-						{
-							"isCorrect": true,
-							"description": "Vue"
-						},
-						{
-							"isCorrect": false,
-							"description": "Una función"
-						},
-						{
-							"description": "sarasa",
-							"isCorrect": true
-						},
-						{
-							"isCorrect": false,
-							"description": "asd"
-						}
-					],
-					"isMultipleChoice": true,
-					"order": "1",
-					"question": "¿Que framework de Javascript preferis?"
-				}
-			],
-			"attempts": 20,
-			"approvalPercentage": 80,
-			"statement": "sarasa",
-			"title": "Cuestionario 7",
-			"id": 7
-		},
-		{
-			"items": [
-				{
-					"answers": [
-						{
-							"isCorrect": true,
-							"description": "asd"
-						},
-						{
-							"description": "sarasa",
-							"isCorrect": false
-						},
-						{
-							"isCorrect": true,
-							"description": "test"
-						}
-					],
-					"isMultipleChoice": true,
-					"order": "10",
-					"question": "multiple"
-				},
-				{
-					"answers": [
-						{
-							"isCorrect": true,
-							"description": "testtt"
-						},
-						{
-							"isCorrect": true,
-							"description": "sdf"
-						}
-					],
-					"isMultipleChoice": false,
-					"order": "2",
-					"question": "single"
-				}
-			],
-			"attempts": 20,
-			"approvalPercentage": 80,
-			"statement": "sarasa",
-			"title": "Cuestionario 6",
-			"id": 10
-		},
-		{
-			"items": [
-				{
-					"answers": [
-						{
-							"description": "Una variable",
-							"isCorrect": false
-						},
-						{
-							"description": "Un tipo de dato primitivo",
-							"isCorrect": false
-						},
-						{
-							"description": "Una cantante",
-							"isCorrect": false
-						},
-						{
-							"description": "Una función",
-							"isCorrect": false
-						},
-						{
-							"description": "Todas las anteriores",
-							"isCorrect": false
-						},
-						{
-							"description": "Ninguna de las anteriores",
-							"isCorrect": false
-						}
-					],
-					"isMultipleChoice": true,
-					"order": "1",
-					"question": "¿Que es un string?"
-				},
-				{
-					"answers": [
-						{
-							"description": "HyperText Markup Language",
-							"isCorrect": false
-						},
-						{
-							"description": "Hiper texto de mercado libre",
-							"isCorrect": false
-						}
-					],
-					"isMultipleChoice": true,
-					"order": "2",
-					"question": "¿Que significa la sigla HTML?"
-				},
-				{
-					"answers": [
-						{
-							"description": "Si",
-							"isCorrect": false
-						},
-						{
-							"description": "No",
-							"isCorrect": false
-						}
-					],
-					"isMultipleChoice": true,
-					"order": "3",
-					"question": "¿Javascript es lo mismo que Java?"
-				}
-			],
-			"attempts": 60,
-			"approvalPercentage": 50,
-			"statement": "Cuestionario acerca de conceptos basicos de dearrollo de software",
-			"title": "Desarrollador de Software ",
-			"id": 11
-		}
-	],
-	"history": [
-		{
-			"idQuestionnaire": 1,
-			"title": "Cuestionario 1",
-			"statement": "Información Sarasa",
-			"approvalPercentage": 80,
-			"limitAttempts": 5,
-      "attempts": 3,
-			"percentage": 58,
-			"responses": [
-				{
-					"question": "¿Cuales de las siguientes figuras fueron presidentes ?",
-					"isMultipleChoice": true,
-					"answers": [
-						{
-							"description": "Un tipo de dato primitivo",
-							"isCorrect": false,
-							"selected": true
-						},
-						{
-							"description": "Cristina Kirchner",
-							"isCorrect": true,
-							"selected": true
-						},
-						{
-							"description": "Evita Perón",
-							"isCorrect": true,
-							"selected": false
-						}
-					]
-				},
-				{
-					"question": "¿Javascript es lo mismo que Java?",
-					"isMultipleChoice": false,
-					"answers": [
-						{
-							"description": "Si",
-							"isCorrect": false,
-							"selected": true
-						},
-						{
-							"description": "No",
-							"isCorrect": true,
-							"selected": false
-						}
-					]
-				}
-			]
-		},
+  "questionnaires": [
     {
-			"idQuestionnaire": 2,
-			"title": "Cuestionario 2",
-			"statement": "Cuestionario acerca de test",
-			"approvalPercentage": 90,
-			"limitAttempts": 10,
+      "items": [
+        {
+          "answers": [
+            {
+              "description": "Cristina Kirchner",
+              "isCorrect": true
+            },
+            {
+              "description": "Evita Perón",
+              "isCorrect": true
+            },
+            {
+              "isCorrect": true,
+              "description": "Madonna"
+            }
+          ],
+          "isMultipleChoice": true,
+          "order": "1",
+          "question": "¿Quien fue la primer presidente Argentina?"
+        },
+        {
+          "answers": [
+            {
+              "isCorrect": true,
+              "description": "Juan Domingo Perón"
+            },
+            {
+              "isCorrect": true,
+              "description": "Arturo Illia"
+            },
+            {
+              "isCorrect": true,
+              "description": "Ricardo Fort"
+            },
+            {
+              "isCorrect": false,
+              "description": "Michael Jackson"
+            }
+          ],
+          "isMultipleChoice": true,
+          "order": "2",
+          "question": "¿Cuales de las siguientes figuras fueron presidentes ?"
+        }
+      ],
+      "attempts": 20,
+      "approvalPercentage": 80,
+      "statement": "Cuestionario sobre politica argentina en la decada de los '70",
+      "title": "Historia Argentina",
+      "id": 6
+    },
+    {
+      "items": [
+        {
+          "answers": [
+            {
+              "description": "React",
+              "isCorrect": false
+            },
+            {
+              "isCorrect": false,
+              "description": "Angular"
+            },
+            {
+              "isCorrect": true,
+              "description": "Vue"
+            },
+            {
+              "isCorrect": false,
+              "description": "Una función"
+            },
+            {
+              "description": "sarasa",
+              "isCorrect": true
+            },
+            {
+              "isCorrect": false,
+              "description": "asd"
+            }
+          ],
+          "isMultipleChoice": true,
+          "order": "1",
+          "question": "¿Que framework de Javascript preferis?"
+        }
+      ],
+      "attempts": 20,
+      "approvalPercentage": 80,
+      "statement": "sarasa",
+      "title": "Cuestionario 7",
+      "id": 7
+    },
+    {
+      "items": [
+        {
+          "answers": [
+            {
+              "description": "Una variable",
+              "isCorrect": false
+            },
+            {
+              "isCorrect": true,
+              "description": "Un tipo de dato primitivo"
+            },
+            {
+              "isCorrect": false,
+              "description": "Una cantante"
+            },
+            {
+              "description": "Una función",
+              "isCorrect": false
+            },
+            {
+              "description": "Todas las anteriores",
+              "isCorrect": false
+            },
+            {
+              "description": "Ninguna de las anteriores",
+              "isCorrect": false
+            }
+          ],
+          "isMultipleChoice": true,
+          "order": "1",
+          "question": "¿Que es un string?"
+        },
+        {
+          "question": "¿Que significa la sigla HTML?",
+          "isMultipleChoice": true,
+          "order": "2",
+          "answers": [
+            {
+              "description": "HyperText Markup Language",
+              "isCorrect": false
+            },
+            {
+              "description": "Hiper texto de mercado libre",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "question": "¿Javascript es lo mismo que Java?",
+          "isMultipleChoice": true,
+          "order": "3",
+          "answers": [
+            {
+              "description": "Si",
+              "isCorrect": false
+            },
+            {
+              "description": "No",
+              "isCorrect": false
+            }
+          ]
+        }
+      ],
+      "attempts": 60,
+      "approvalPercentage": 50,
+      "statement": "Cuestionario acerca de conceptos basicos de dearrollo de software",
+      "title": "Desarrollador de Software ",
+      "id": 11
+    },
+    {
+      "items": [
+        {
+          "answers": [
+            {
+              "isCorrect": true,
+              "description": "Jest"
+            },
+            {
+              "description": "Cypress",
+              "isCorrect": false
+            },
+            {
+              "description": "Enzyme",
+              "isCorrect": false
+            }
+          ],
+          "isMultipleChoice": false,
+          "order": "1",
+          "question": "¿Cual de los siguientes es un motor de test?"
+        },
+        {
+          "answers": [
+            {
+              "description": "Su logica de negocio",
+              "isCorrect": false
+            },
+            {
+              "description": "Su implementación",
+              "isCorrect": false
+            },
+            {
+              "isCorrect": true,
+              "description": "Su renderizado y funcionamiento sin errores"
+            }
+          ],
+          "isMultipleChoice": false,
+          "order": "2",
+          "question": "Que se recomienda testear de un componente"
+        }
+      ],
       "attempts": 2,
-			"percentage": 95,
-			"responses": [
-				{
-					"question": "¿Cuales de las siguientes figuras fueron presidentes ?",
-					"isMultipleChoice": true,
-					"answers": [
-						{
-							"description": "Un tipo de dato primitivo",
-							"isCorrect": false,
-							"selected": true
-						},
-						{
-							"description": "Cristina Kirchner",
-							"isCorrect": true,
-							"selected": true
-						},
-						{
-							"description": "Evita Perón",
-							"isCorrect": true,
-							"selected": false
-						}
-					]
-				},
-				{
-					"question": "¿Javascript es lo mismo que Java?",
-					"isMultipleChoice": false,
-					"answers": [
-						{
-							"description": "Si",
-							"isCorrect": false,
-							"selected": true
-						},
-						{
-							"description": "No",
-							"isCorrect": true,
-							"selected": false
-						}
-					]
-				}
-			]
-		}
-	]
+      "approvalPercentage": 99,
+      "statement": "Enunciado del test, un test super estricto ",
+      "title": "Test",
+      "id": 12
+    }
+  ],
+  "history": [
+    {
+      "idQuestionnaire": 1,
+      "title": "Cuestionario 1",
+      "statement": "Información Sarasa",
+      "approvalPercentage": 80,
+      "limitAttempts": 5,
+      "attempts": 3,
+      "percentage": 58,
+      "responses": [
+        {
+          "question": "¿Cuales de las siguientes figuras fueron presidentes ?",
+          "isMultipleChoice": true,
+          "answers": [
+            {
+              "description": "Un tipo de dato primitivo",
+              "isCorrect": false,
+              "selected": true
+            },
+            {
+              "description": "Cristina Kirchner",
+              "isCorrect": true,
+              "selected": true
+            },
+            {
+              "description": "Evita Perón",
+              "isCorrect": true,
+              "selected": false
+            }
+          ]
+        },
+        {
+          "question": "¿Javascript es lo mismo que Java?",
+          "isMultipleChoice": false,
+          "answers": [
+            {
+              "description": "Si",
+              "isCorrect": false,
+              "selected": true
+            },
+            {
+              "description": "No",
+              "isCorrect": true,
+              "selected": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idQuestionnaire": 2,
+      "title": "Cuestionario 2",
+      "statement": "Cuestionario acerca de test",
+      "approvalPercentage": 90,
+      "limitAttempts": 10,
+      "attempts": 2,
+      "percentage": 95,
+      "responses": [
+        {
+          "question": "¿Cuales de las siguientes figuras fueron presidentes ?",
+          "isMultipleChoice": true,
+          "answers": [
+            {
+              "description": "Un tipo de dato primitivo",
+              "isCorrect": false,
+              "selected": true
+            },
+            {
+              "description": "Cristina Kirchner",
+              "isCorrect": true,
+              "selected": true
+            },
+            {
+              "description": "Evita Perón",
+              "isCorrect": true,
+              "selected": false
+            }
+          ]
+        },
+        {
+          "question": "¿Javascript es lo mismo que Java?",
+          "isMultipleChoice": false,
+          "answers": [
+            {
+              "description": "Si",
+              "isCorrect": false,
+              "selected": true
+            },
+            {
+              "description": "No",
+              "isCorrect": true,
+              "selected": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

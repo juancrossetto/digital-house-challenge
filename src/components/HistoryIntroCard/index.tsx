@@ -10,7 +10,7 @@ export interface IHistoryIntroCardProps {
 const HistoryIntroCard: FC<IHistoryIntroCardProps> = ({ questionnaire }) => {
   const { push } = useHistory();
   const { idQuestionnaire, title, percentage, approvalPercentage, attempts, limitAttempts } = questionnaire;
-  const approved = approvalPercentage <= percentage;
+  const approved = (approvalPercentage || 0) <= (percentage ||0);
 
   const handleDetail = () => idQuestionnaire && idQuestionnaire > 0 && push(`/history/${idQuestionnaire}`);
   return (

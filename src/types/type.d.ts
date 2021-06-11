@@ -20,13 +20,13 @@ interface IAnswer {
 }
 
 interface IQuestionnaireHistory {
-  idQuestionnaire: number;
-  title: string;
-	statement: string;
-	approvalPercentage: number;
-  limitAttempts: number;
-  attempts: number;
-  percentage: number;
+  idQuestionnaire?: number;
+  title?: string;
+	statement?: string;
+	approvalPercentage?: number;
+  limitAttempts?: number;
+  attempts?: number;
+  percentage?: number;
   // isFinished: boolean;
 	responses: IQuestionnaireHistoryItem[]; // attempts === items.length
 }
@@ -49,10 +49,17 @@ type QuestionnaireState = {
 	notification: string;
 };
 type FormState = {
-	historical: IQueationnaireHistory[];
-	questionnaire?: IQuestionnaire;
+	// historical: IQueationnaireHistory[];
+  questionnaire?: IQuestionnaire;
+  actualHistory?: IQuestionnaireHistory;
+  currentResponse?: IQuestionnaireHistoryItem;
+	responses?: IQuestionnaireHistory;
 	currentStep: number;
 	totalSteps: number;
+  attempts: number;
+  notification: string;
+  error: boolean;
+  loading: boolean;
 };
 
 type HistoryState = {

@@ -30,18 +30,10 @@ const AnswersSection: FC<IAnswersSection> = ({
     control,
     name: `items[${questionIndex}].answers`,
   });
-  useEffect(() => {
-    console.log('isMultipleChoice', isMultipleChoice);
-  }, [isMultipleChoice]);
 
   useEffect(() => {
     setQuestionsUpdated([...fields]);
   }, [fields]);
-  useEffect(() => {
-    console.log('questionsUpdated', questionsUpdated);
-  }, [questionsUpdated]);
-
-  // console.log('item', item);
 
   return (
     <div className="option">
@@ -92,7 +84,6 @@ const AnswersSection: FC<IAnswersSection> = ({
                 disabled={isReadOnly}
               />
             }
-            {JSON.stringify(answer.isCorrect)}
             <div className="option__btn-container">
               {fields.length > 0 && (
                 <Button

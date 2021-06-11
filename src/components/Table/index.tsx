@@ -2,7 +2,6 @@ import React, { FC } from "react";
 import MUIDataTable from "mui-datatables";
 import EditIcon from "@material-ui/icons/Edit";
 import DeleteIcon from "@material-ui/icons/Delete";
-import VisibilityIcon from "@material-ui/icons/Visibility";
 import { COLUMNS } from "./columns";
 import "./Table.scss";
 
@@ -22,13 +21,8 @@ const Table: FC<TableProps> = ({ data, handleRedirection, handleDelete }) => {
           empty: true,
           customBodyRender: (value: any, tableMeta: any, updateValue: any) => (
             <div className="table__icons">
-              <VisibilityIcon
-                color="primary"
-                onClick={() => handleRedirection()}
-                className="table__icon"
-              />
               <EditIcon
-                color="secondary"
+                color="primary"
                 onClick={() => handleRedirection(tableMeta.rowData[4])}
                 className="table__icon"
               />

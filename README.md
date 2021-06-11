@@ -4,12 +4,12 @@
 
 #### ¿De que trata el desafío?
 Se debe desarrollar una pequeña aplicación donde se configuren cuestionarios, además, se debe previsualizar el cuestionario cómo si lo viera un usuario que lo responde. Las reglas de negocio son las siguientes: 
-● Un cuestionario, tiene un título, un enunciado, un porcentaje de aprobación y una cantidad de intentos límite (todos son campos obligatorios). 
-● El cuestionario debe tener al menos una pregunta y las preguntas pueden ser de tipo Multiple Choice, Single Choice. 
-● Las preguntas de multiple choice tienen un enunciado, y las opciones que deben poder ser marcadas cómo correctas. 
-● Las preguntas de single choice son iguales, pero sólo se puede marcar una sola opción como correcta. 
-● Las preguntas deben tener un orden y se deben poder ordenar desde la UI. ● El cuestionario tiene que persistirse haciendo un llamado al backend. Para simular la api utilizar esta libreria https://github.com/typicode/json-server 
-● El usuario final debe poder responder el cuestionario, esto debe contar en el estado de la aplicación la cantidad de intentos que realizó y si aprobó.
+* Un cuestionario, tiene un título, un enunciado, un porcentaje de aprobación y una cantidad de intentos límite (todos son campos obligatorios). 
+* El cuestionario debe tener al menos una pregunta y las preguntas pueden ser de tipo Multiple Choice, Single Choice. 
+* Las preguntas de multiple choice tienen un enunciado, y las opciones que deben poder ser marcadas cómo correctas. 
+* Las preguntas de single choice son iguales, pero sólo se puede marcar una sola opción como correcta. 
+* Las preguntas deben tener un orden y se deben poder ordenar desde la UI. ● El cuestionario tiene que persistirse haciendo un llamado al backend. Para simular la api utilizar esta libreria https://github.com/typicode/json-server 
+* El usuario final debe poder responder el cuestionario, esto debe contar en el estado de la aplicación la cantidad de intentos que realizó y si aprobó.
 
 
 #### Objetivos 
@@ -29,7 +29,12 @@ Se debe desarrollar una pequeña aplicación donde se configuren cuestionarios, 
 
 
 ### Proyecto deployado en netlify:
-We can access to the demo: [here](https://digital-house-challenge-juan.netlify.com/)
+Podemos ver una demo: [aquí](https://digital-house-challenge-juan.netlify.com/)
+
+### Construir y montar imagen docker:
+1. Correr en consola: "docker build -t nombreImagen ."
+2. Una vez creada la imagen, arrancamos el contenedor: "docker run -it -p 8000:80 --name nombreContenedor nombreImagen".
+3. Ingresar a https://localhost:8000/  (o el puerto que hayamos escogido previamente)
 
 ### Paginas
 | Ruta  | Descripción  | 
@@ -38,6 +43,8 @@ We can access to the demo: [here](https://digital-house-challenge-juan.netlify.c
 | /config/      | Página con tabla para configurar cuestionarios     |
 | /config/:id      | Página para editar/visualizar/crear un cuestionario en particular     |
 | /form/:id | Pagina donde se responde el cuestionario        |
+| /history | Pagina para ver el historial de cuestionarios respondidos        |
+| /history/:id | Pagina para ver en detalle el cuestionario realizado, preguntas contestadas bien y mal, puntuación, etc. (TO DO)        |
 | * | Página no encontrada        |
 
 ### Librerías/Tecnologias utilizadas
@@ -57,7 +64,8 @@ La gran mayoria de los componentes fueron testeados con snapshots y testing libr
 
 
 ### Cosas por agregar/mejorar
-* <strike>Diseño responsive</strike>
-* <strike>Volcar absolutamente todo los estilos con SASS para eliminar chakra(para la funcionalidad del mode).</strike>
-* <strike>Mejoras de diseño.</strike>
+* Diseño responsive
+* Finalizar pantalla de consulta de cuestionario consultado.
+* Volcar absolutamente todo los estilos con SASS para eliminar chakra(para la funcionalidad del mode).
+* Mejoras de diseño.
 * Testear todos los componentes, paginas y hooks y realizar test de integración.
