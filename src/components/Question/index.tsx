@@ -16,9 +16,6 @@ const Question: FC<IQuestionProps> = ({ item, handleCheck }) => {
       handleCheck((oldArray: IAnswer[]) => [...oldArray.filter((oldOption: IAnswer) => oldOption.description !== option.description)]);
     }
   }
-  useEffect(() => {
-    console.log('cambio item', item);
-  }, [item])
   
   return (
     <div className="question">

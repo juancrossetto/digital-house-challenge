@@ -8,7 +8,8 @@ Se debe desarrollar una pequeña aplicación donde se configuren cuestionarios, 
 * El cuestionario debe tener al menos una pregunta y las preguntas pueden ser de tipo Multiple Choice, Single Choice. 
 * Las preguntas de multiple choice tienen un enunciado, y las opciones que deben poder ser marcadas cómo correctas. 
 * Las preguntas de single choice son iguales, pero sólo se puede marcar una sola opción como correcta. 
-* Las preguntas deben tener un orden y se deben poder ordenar desde la UI. ● El cuestionario tiene que persistirse haciendo un llamado al backend. Para simular la api utilizar esta libreria https://github.com/typicode/json-server 
+* Las preguntas deben tener un orden y se deben poder ordenar desde la UI. 
+* El cuestionario tiene que persistirse haciendo un llamado al backend. Para simular la api utilizar esta libreria https://github.com/typicode/json-server 
 * El usuario final debe poder responder el cuestionario, esto debe contar en el estado de la aplicación la cantidad de intentos que realizó y si aprobó.
 
 
@@ -32,9 +33,9 @@ Se debe desarrollar una pequeña aplicación donde se configuren cuestionarios, 
 Podemos ver una demo: [aquí](https://digital-house-challenge-juan.netlify.com/)
 
 ### Construir y montar imagen docker:
-1. Correr en consola: "docker build -t nombreImagen ."
-2. Una vez creada la imagen, arrancamos el contenedor: "docker run -it -p 8000:80 --name nombreContenedor nombreImagen".
-3. Ingresar a https://localhost:8000/  (o el puerto que hayamos escogido previamente)
+1. Correr en consola: `docker build -t nombreImagen .`
+2. Una vez creada la imagen, arrancamos el contenedor: `docker run -it -p 8000:80 --name nombreContenedor nombreImagen`.
+3. Ingresar a `https://localhost:8000/`  (o el puerto que hayamos escogido previamente)
 
 ### Paginas
 | Ruta  | Descripción  | 
@@ -54,9 +55,9 @@ Podemos ver una demo: [aquí](https://digital-house-challenge-juan.netlify.com/)
 `SASS`: Por definición del desafío se avanzo con estilos en SASS , con la nomenclatura BEM.
 `Redux Thunk`: Por definición del desafío se utilizó redux thunk para manejo asincronico del estado global.  
 `Netlify`: Para deployar la aplicación.  
-`Material-ui`: Para armar rapidamente la tabla de gestión de cuestionarios. 
-`React Router DOM`: Para gestionar el enrutado de la aplicación. 
-`Chakra-UI`: Se utilizó solo para la funcionalidad dark/light mode. 
+`Material-ui`: Para armar rapidamente la tabla de gestión de cuestionarios.  
+`React Router DOM`: Para gestionar el enrutado de la aplicación.  
+`Chakra-UI`: Se utilizó solo para la funcionalidad dark/light mode.  
 
 ### Testing Unitario
 #### Jest y @testing-library 
