@@ -28,10 +28,6 @@ Se debe desarrollar una pequeña aplicación donde se configuren cuestionarios, 
 | npm run test      | Corre los test con jest y react-testing-library           |
 | npm run build | Genera un build de la aplicación para poder publicarla        |
 
-
-### Proyecto deployado en netlify:
-Podemos ver una demo: [aquí](https://digital-house-challenge-juan.netlify.com/)
-
 ### Construir y montar imagen docker:
 1. Correr en consola: `docker build -t nombreImagen .`
 2. Una vez creada la imagen, arrancamos el contenedor: `docker run -it -p 8000:80 --name nombreContenedor nombreImagen`.
