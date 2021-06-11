@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FC, useEffect } from "react";
+import React, { ChangeEvent, FC } from "react";
 import "./Question.scss";
 
 export interface IQuestionProps {

@@ -32,6 +32,7 @@ const AnswersSection: FC<IAnswersSection> = ({
   });
 
   useEffect(() => {
+    console.log('questionsUpdated', questionsUpdated);
     setQuestionsUpdated([...fields]);
   }, [fields]);
 
